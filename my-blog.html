@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Crimson+Text:ital,wght@1,400;1,700&family=Inter:wght@400;700&family=KoHo:wght@700&family=Lato:wght@400;700&family=Montserrat:wght@200;300;600;700&family=Open+Sans:wght@400;700&family=Pridi:wght@400;500;700&family=Roboto&display=swap" rel="stylesheet">
+    <title>My blog</title>
+    <meta name="description" content="Данный сайт сверстал студент курса по
+    изучению специальности Frontend-разработчик">
+    <meta name="keywords" content="Frontend, gulp, javascript, css, scss, html">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className =
+        docElement.className.replace(/\bno-js\b/, "") + " js";
+    </script>
+    
+    
+
+    <link rel="stylesheet" href="css/style.min.css?v=1674562100725">
+
+  </head>
+  <body class="my-blog-page font-medium">
+    <header class="header font-bold">
+  <nav class="header__nav page-container">
+    <a href="../../index.html" class="header__link header__home-active">Home</a>
+
+    <div class="header__menu-wrapper">
+      <a href="../../my-blog.html" class="header__link header__my-blog-active">My blog</a>
+
+      <button class="header__link header__button header__sign-in_js">
+        Sign in
+      </button>
+      <button class="header__link header__button header__register_js">
+        Register
+      </button>
+      <a href="../../my-profile.html" class="header__link header__my-profile-active header__my-profile_js hidden-item">My profile</a>
+      <button class="header__link header__button header__logout_js hidden-item">
+        Logout
+      </button>
+    </div>
+  </nav>
+</header>
+ <div class="mobile-menu font-bold mobile-menu_js hidden-item">
+  <button class="mobile-menu__close mobile-menu__close_js"></button>
+  <nav class="mobile-menu__nav">
+    <a href="../../index.html" class="mobile-menu__link header__home-active">Home</a>
+    <a href="../../my-blog.html" class="mobile-menu__link header__my-blog-active">My blog</a>
+    <button type="button" class="mobile-menu__link header__button mobile-menu-login-btn_js">
+      Sign in
+    </button>
+    <button type="button" class="mobile-menu__link header__button mobile-menu-register-btn_js">
+      Register
+    </button>
+    <a href="../../my-profile.html" class="mobile-menu__link mobile-menu__my-profile-active mobile-menu-profile-btn_js hidden-item">My profile</a>
+    <button type="button" class="mobile-menu__link header__button mobile-menu-logout-btn_js hidden-item">
+      Logout
+    </button>
+  </nav>
+</div>
+
+    <div class="page-container">
+      <div class="title-sandwich-container">
+        <h1 class="main__title my-blog-page__title font-bold">My blog</h1>
+        <button type="button" class="sandwich-button main__sandwich-button main__sandwich-button_js"></button>
+      </div>
+      <section class="my-blog__filter">
+        <h2 class="my-blog__filter-title hidden-item">Filter</h2>
+        <form name="myBlogFilterForm" class="my-blog__filter-wrapper">
+          <div class="filter__container">
+            
+            <div class="filter__tags-wrapper">
+              <legend class="filter__title">Tags</legend>
+              <ul class="filter__color-checkbox-list">
+                <li>
+                  <input type="checkbox" id="checkbox-blue" class="filter__blue-checkbox" name="filterTag" value="1">
+                  <label class="filter__blue-label" for="checkbox-blue"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-light-blue" class="filter__light-blue-checkbox" name="filterTag" value="2">
+                  <label class="filter__light-blue-label" for="checkbox-light-blue"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-yellow" class="filter__yellow-checkbox" name="filterTag" value="3">
+                  <label class="filter__yellow-label" for="checkbox-yellow"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-marine" class="filter__marine-checkbox" name="filterTag" value="4">
+                  <label class="filter__marine-label" for="checkbox-marine"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-orange" class="filter__orange-checkbox" name="filterTag" value="5">
+                  <label class="filter__orange-label" for="checkbox-orange"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-pink" class="filter__pink-checkbox" name="filterTag" value="6">
+                  <label class="filter__pink-label" for="checkbox-pink"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-purple" class="filter__purple-checkbox" name="filterTag" value="7">
+                  <label class="filter__purple-label" for="checkbox-purple"></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-green" class="filter__green-checkbox" name="filterTag" value="8">
+                  <label class="filter__green-label" for="checkbox-green"></label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter__views-wrapper">
+              <legend class="filter__title">Views</legend>
+              <ul class="filter__views-list">
+                <li>
+                  <input type="radio" id="radio-min" class="filter__views-min-checkbox" value="100-500" name="filterViewsGroup">
+                  <label class="filter__views-min-label" for="radio-min">100-500</label>
+                </li>
+                <li>
+                  <input type="radio" id="radio-middle" class="filter__views-middle-checkbox" value="500-1000" name="filterViewsGroup">
+                  <label class="filter__views-middle-label" for="radio-middle">500-1000</label>
+                </li>
+                <li>
+                  <input type="radio" id="radio-max" class="filter__views-max-checkbox" value="1000-2000" name="filterViewsGroup">
+                  <label class="filter__views-max-label" for="radio-max">1000-2000</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter__comments-wrapper">
+              <legend class="filter__title">Comments</legend>
+              <ul class="filter__comments-list">
+                <li>
+                  <input type="checkbox" id="checkbox-0" class="filter__comments-min-checkbox" value="0" name="filterComments">
+                  <label class="filter__comments-min-label" for="checkbox-0">0</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-0-1" class="filter__comments-middle-checkbox" value="0-1" name="filterComments">
+                  <label class="filter__comments-middle-label" for="checkbox-0-1">0-1</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-1-50" class="filter__comments-max-checkbox" value="1-50" name="filterComments">
+                  <label class="filter__comments-max-label" for="checkbox-1-50">1-50</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter__how-show-wrapper">
+              <legend class="filter__title">How show?</legend>
+              <ul class="filter__how-show-list">
+                <li>
+                  <input type="radio" id="radio-show-5" class="filter__how-show-min-radio" value="5" name="filterHowShowGroup">
+                  <label class="filter__how-show-min-label" for="radio-show-5">show 5</label>
+                </li>
+                <li>
+                  <input type="radio" id="radio-show-10" class="filter__how-show-max-radio" value="10" name="filterHowShowGroup">
+                  <label class="filter__how-show-max-label" for="radio-show-10">show 10</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter__sort-by-wrapper">
+              <legend class="filter__title">Sort by</legend>
+              <ul class="filter__sort-by-list">
+                <li>
+                  <input type="radio" id="radio-sort-by-date" class="filter__sort-by-date-radio" value="date" name="filterSortByGroup">
+                  <label class="filter__sort-by-date-label" for="radio-sort-by-date">date</label>
+                </li>
+                <li>
+                  <input type="radio" id="radio-sort-by-title" class="filter__sort-by-title-radio" value="title" name="filterSortByGroup">
+                  <label class="filter__sort-by-title-label" for="radio-sort-by-title">title</label>
+                </li>
+                <li>
+                  <input type="radio" id="radio-sort-by-views" class="filter__sort-by-views-radio" value="views" name="filterSortByGroup">
+                  <label class="filter__sort-by-views-label" for="radio-sort-by-views">views</label>
+                </li>
+              </ul>
+            </div>
+            <div class="filter__reset">
+              <button type="button" class="button filter__reset-button filter__reset-button_js">
+                Reset
+              </button>
+            </div>
+          </div>
+          <div class="filter__submit">
+            <input type="text" class="filter__search-field" name="filterName">
+            <button type="submit" class="button filter__submit-button">
+              Search
+            </button>
+          </div>
+        </form>
+      </section>
+      <section class="my-blog-page__articles">
+        <h2 class="my-blog__articles-title hidden-item">Articles list</h2>
+        <div class="my-blog__articles result_js"></div>
+      </section>
+      <div class="my-blog__pagination-wrapper">
+        <button class="my-blog__slider-button-left my-blog__slider-button-left_js">
+          <img src="../img/icons/slider-left.png" alt="Стрелка влево">
+        </button>
+        <div class="my-blog__pagination_js"></div>
+        <button class="my-blog__slider-button-right my-blog__slider-button-right_js">
+          <img src="../img/icons/slider-right.png" alt="Стрелка вправо">
+        </button>
+      </div>
+    </div>
+    <button type="button" class="scroll-top scroll-top_js hidden-item" aria-label="Вверх"></button>
+
+    <div class="main-loader_js loader hidden-item">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+    <div class="color-wrapper"><footer class="footer font-medium page-container">
+  <h2 class="footer__title font-bold">Contacts</h2>
+  <div class="footer__commentary">
+    <p>Want to know more or just chat?</p>
+    <p>You are welcome!</p>
+  </div>
+  <button type="button" class="footer__button footer__button_js">
+    Send message
+  </button>
+  <ul class="footer__link-list font-bold">
+    <li class="footer__link-list-item">
+      <a href="#" class="footer__link-button">Instagram</a>
+    </li>
+    <li class="footer__link-list-item">
+      <a href="#" class="footer__link-button">Vk</a>
+    </li>
+    <li class="footer__link-list-item">
+      <a href="#" class="footer__link-button">Telegram</a>
+    </li>
+    <li class="footer__link-list-item">
+      <a href="#" class="footer__link-button">Mail</a>
+    </li>
+    <li class="footer__link-list-item">
+      <a href="#" class="footer__link-button">GitHub</a>
+    </li>
+    <li class="footer__link-list-item">
+      <a href="#" class="footer__link-button">Phone</a>
+    </li>
+  </ul>
+  <div class="footer__notice">
+    <p>Design by DL Academy</p>
+    <p>Program code from Dmitry</p>
+  </div>
+</footer>
+</div>
+    <div class="modal sign-in-modal_js hidden-item">
+  <form name="login" class="sign-in-modal__form modal__form" action="#" novalidate>
+    <div class="sign-in-modal__wrapper">
+      <div class="sign-in-modal__field-wrapper">
+        <label for="sign-in-email-field" class="sign-in-modal__label">Email<span>*</span></label>
+        <input type="email" id="sign-in-email-field" class="sign-in-modal__email modal__field" name="email" required>
+      </div>
+      <div class="sign-in-modal__field-wrapper">
+        <label for="sign-in-password-field" class="sign-in-modal__label">Password<span>*</span></label>
+        <input type="password" id="sign-in-password-field" class="sign-in-modal__password modal__field" name="password" required>
+      </div>
+    </div>
+    <button type="submit" class="button sign-in-modal__button font-bold">
+      Log in
+    </button>
+    <button type="button" class="close-button close-button-login_js"></button>
+  </form>
+</div>
+
+
+
+ <div class="modal register-modal register-modal_js hidden-item">
+  <form name="signUp" class="register-modal__form modal__form" action="#" novalidate>
+    <div class="register-modal__email-wrapper">
+      <label for="register-email-field" class="modal__label">Email<span>*</span></label>
+      <input type="email" id="register-email-field" class="register-modal__field modal__field" name="email" required>
+    </div>
+    <div class="register-modal__name-surname-wrapper">
+      <div class="modal__wrapper">
+        <label for="register-name-field" class="modal__label">Name<span>*</span></label>
+        <input type="text" id="register-name-field" class="register-modal__field modal__field" name="name" required>
+      </div>
+      <div class="modal__wrapper">
+        <label for="register-surname-field" class="modal__label">Surname<span>*</span></label>
+        <input type="text" id="register-surname-field" class="register-modal__field modal__field" name="surname" required>
+      </div>
+    </div>
+    <div class="register-modal__password-repeat-wrapper">
+      <div class="modal__wrapper">
+        <label for="register-password-field" class="modal__label">Password<span>*</span></label>
+        <input type="password" id="register-password-field" class="register-modal__field modal__field" name="password" required>
+      </div>
+      <div class="modal__wrapper">
+        <label for="register-repeat-field" class="modal__label">Repeat password<span>*</span></label>
+        <input type="password" id="register-repeat-field" class="register-modal__field modal__field" name="passwordRepeat" required>
+      </div>
+    </div>
+    <div class="register-modal__location-age-wrapper">
+      <div class="modal__wrapper">
+        <label for="register-location-field" class="modal__label">Location<span>*</span></label>
+        <input type="text" id="register-location-field" class="register-modal__field modal__field" name="location" required>
+      </div>
+      <div class="modal__wrapper">
+        <label for="register-age-field" class="modal__label">Age<span>*</span></label>
+        <input type="text" id="register-age-field" class="register-modal__field modal__field" name="age" required>
+      </div>
+    </div>
+    <div class="register-modal__checkbox register-checkbox_js">
+      <input type="checkbox" id="register-checkbox-field" class="checkbox" name="checkbox" required>
+      <label for="register-checkbox-field" class="checkbox__name">Clicking on the button, you consent to the processing of your personal
+        data.</label>
+    </div>
+    <button type="submit" class="button font-bold register-button_js" disabled="disabled">
+      Sign up
+    </button>
+    <button type="button" class="close-button register-modal__close-button close-button-register_js"></button>
+    <div class="register-loader_js loader hidden-item">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </form>
+</div>
+
+    <div class="modal font-medium send-message-modal_js hidden-item">
+  <form class="send-message-modal__form modal__form" action="#" name="message" novalidate>
+    <div class="send-message-modal__name-subject-wrapper">
+      <div class="send-message-modal__name-wrapper modal__wrapper">
+        <label for="send-message-name-field" class="modal__label">What is your name?<span>*</span></label>
+        <input type="text" id="send-message-name-field" class="modal__field" name="name" required>
+      </div>
+      <div class="send-message-modal__subject-wrapper modal__wrapper">
+        <label for="send-message-subject-field" class="modal__label">Message subject<span>*</span></label>
+        <input type="text" id="send-message-subject-field" class="modal__field" name="subject" required>
+      </div>
+    </div>
+    <div class="send-message-modal__email-phone-wrapper">
+      <div class="send-message-modal__email-wrapper modal__wrapper">
+        <label for="send-message-email-field" class="modal__label">Your Email<span>*</span></label>
+        <input type="text" id="send-message-email-field" class="modal__field" name="email" required>
+      </div>
+      <div class="send-message-modal__phone-wrapper modal__wrapper">
+        <label for="send-message-phone-field" class="modal__label">Your mobile phone<span>*</span></label>
+        <input type="text" id="send-message-phone-field" class="modal__field" name="mobilePhone" required>
+      </div>
+    </div>
+    <div class="send-message-modal__discuss-wrapper modal__wrapper">
+      <label for="send-message-discuss-field" class="modal__label">What do you want to discuss with me?</label>
+      <input type="text" id="send-message-discuss-field" class="send-message-modal__discuss-field" name="message">
+    </div>
+    <div class="send-message-modal__checkbox send-message-checkbox_js">
+      <input type="checkbox" id="send-message-checkbox-field" class="checkbox" name="checkbox">
+      <label for="send-message-checkbox-field" class="checkbox__name">Clicking on the button, you consent to the processing of your personal
+        data.</label>
+    </div>
+    <button type="submit" class="button font-bold send-message-button_js" disabled="disabled">
+      Send
+    </button>
+    <button type="button" class="close-button send-message-modal__close-button close-button-send-message_js"></button>
+  </form>
+  
+</div>
+ <div class="modal modal-after after-modal_js hidden-item">
+  <div class="modal-after-container">
+    <div class="modal-after-text-wrapper">
+      <p class="modal-after-text"></p>
+    </div>
+    <button type="button" class="close-button modal-after-close-button after-close-button_js"></button>
+  </div>
+</div>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/scroll-top.js"></script>
+    <script src="js/my-blog.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/my-profile.js"></script>
+    <script src="js/send-message.js"></script>
+    <script src="js/log-in.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/change-password.js"></script>
+    <script src="js/change-other.js"></script>
+  </body>
+</html>
